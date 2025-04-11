@@ -3,11 +3,10 @@
 ## Jose Araya --> First-Year – Computer Science Major
 
 ## Course Overview
-This repository documents my journey through the **Java Object-Oriented Programming** course at [Your Institution], taught by **Professor Gil Salu**. The course focused on fundamental programming concepts using Java, with an emphasis on object-oriented design, logical problem-solving, and building real-world applications through hands-on practice.
+This repository documents my journey through the **Java Object-Oriented Programming** course at New College of Florida, taught by **Professor Gil Salu**. The course focused on fundamental programming concepts using Java, with an emphasis on object-oriented design, logical problem-solving, and building real-world applications through hands-on practice.
 
 ## Course Details
 - **Instructor:** Professor Gil Salu  
-- **Room:** HNS168  
 - **Textbook:** ZyBooks: *Early Objects*  
 
 ## Topics Covered
@@ -59,5 +58,5 @@ This course was a valuable introduction to Java and object-oriented thinking. Th
 
 ---
 
-> **Note:** This README reflects my personal learning experience from the Spring 2025 semester of Java OOP at [Your Institution].
+> **Note:** This README reflects my personal learning experience from the Spring 2025 semester of Java OOP at New College of Florida.
 
