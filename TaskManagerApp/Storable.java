@@ -10,4 +10,4 @@ public interface Storable {
     void loadFromFile(String filename) throws IOException;
 }
 
-}
+

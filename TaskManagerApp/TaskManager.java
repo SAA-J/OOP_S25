@@ -1,8 +1,9 @@
 package TaskManagerApp;
 
+import java.io.*;
 import java.util.ArrayList;
 
-public class TaskManager {
+public class TaskManager implements Storable {
     private ArrayList<Task> tasks;
 
 
@@ -11,12 +12,13 @@ public class TaskManager {
         this.tasks = new ArrayList<>();
     }
 
-    public void addTask(Task task){
-        if (task != null) {
+    public void addTask(String description) {
+        if (description != null && !description.trim().isEmpty()) {
+            Task task = new Task(description);
             tasks.add(task);
             System.out.println("Task added: " + task.getDescription());
         } else {
-            System.out.println("Task cannot be null.");
+            System.out.println("Task description cannot be empty.");
         }
     }
 
@@ -35,6 +37,38 @@ public class TaskManager {
             System.out.println("Task remove: " + removedTask.getDescription());
         } else {
             System.out.println("Invalid task index.");
+        }
+    }
+
+
+    public void saveToFile(String filePath) throws IOException {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            for (Task task : tasks) {
+                // Save as "description|status"
+                writer.write(task.getDescription() + "|" + (task.isComplete() ? "1" : "0"));
+                writer.newLine();
+            }
+            System.out.println("Tasks saved to " + filePath);
+        }
+    }
+
+    @Override
+    public void loadFromFile(String filePath) throws IOException {
+        tasks.clear();  // Clear the existing tasks before loading
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // Split line into description and status
+                String[] parts = line.split("\\|");
+                if (parts.length == 2) {
+                    String description = parts[0];
+                    boolean isComplete = parts[1].equals("1");
+                    Task task = new Task(description);
+                    if (isComplete) task.toggleStatus();  // Set the status if complete
+                    tasks.add(task);
+                }
+            }
+            System.out.println("Tasks loaded from " + filePath);
         }
     }
 
