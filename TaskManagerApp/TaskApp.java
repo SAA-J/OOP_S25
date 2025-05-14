@@ -105,7 +105,7 @@ public class TaskApp {
         }
     }
 
-    // Main method to launch the application
+    // Main method
     public static void main(String[] args) {
         JFrame frame = new JFrame("Task Manager");
         frame.setContentPane(new TaskApp().mainPanel);

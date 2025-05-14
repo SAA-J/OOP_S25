@@ -44,7 +44,6 @@ public class TaskManager implements Storable {
     public void saveToFile(String filePath) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (Task task : tasks) {
-                // Save as "description|status"
                 writer.write(task.getDescription() + "|" + (task.isComplete() ? "1" : "0"));
                 writer.newLine();
             }
@@ -54,11 +53,10 @@ public class TaskManager implements Storable {
 
     @Override
     public void loadFromFile(String filePath) throws IOException {
-        tasks.clear();  // Clear the existing tasks before loading
+        tasks.clear();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Split line into description and status
                 String[] parts = line.split("\\|");
                 if (parts.length == 2) {
                     String description = parts[0];
