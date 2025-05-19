@@ -33,7 +33,10 @@ git clone https://github.com/SAA-J/OOP_S25.git
 
 2. Open the project in IntelliJ IDEA.
 3. Make sure your Java SDK is properly configured.
-4. Run the **TaskApp.java** file to launch the application.
+4. Verify that the .form file is correctly linked:
+    Open the TaskApp.form file in the IntelliJ GUI Designer.
+    Make sure the form components are correctly bound to the variables in the TaskApp.java class.(bind to class in the .form)
+5. Run the **TaskApp.java** file to launch the application.
 
 ## 🚀 Running the App
 
