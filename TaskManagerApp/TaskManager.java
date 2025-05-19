@@ -13,7 +13,7 @@ public class TaskManager implements hey_gil_Storable {
     }
 
     //Adds a new task to the list
-    public void addTask(String description) {
+    public void hey_gil_addTask(String description) {
         if (description != null && !description.trim().isEmpty()) {
             hey_gil_task task = new hey_gil_task(description);
             tasks.add(task);
@@ -24,7 +24,7 @@ public class TaskManager implements hey_gil_Storable {
     }
 
     //Mark task as completed
-    public void completeTask(int index){
+    public void hey_gil_completeTask(int index){
         if (index >= 0 && index < tasks.size()){
             hey_gil_task task = tasks.get(index);
             task.hey_gil_toggleStatus();
@@ -35,7 +35,7 @@ public class TaskManager implements hey_gil_Storable {
     }
 
     //Removes task from the list
-    public void removeTask(int index){
+    public void hey_gil_removeTask(int index){
         if (index >= 0 && index < tasks.size()){
             hey_gil_task removedTask = tasks.remove(index);
             System.out.println("Task remove: " + removedTask.hey_gil_getDescription());
@@ -45,7 +45,7 @@ public class TaskManager implements hey_gil_Storable {
     }
 
     //Saves all tasks to a text file
-    public void saveToFile(String filePath) throws IOException {
+    public void hey_gil_saveToFile(String filePath) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
             for (hey_gil_task task : tasks) {
                 writer.write(task.hey_gil_getDescription() + "|" + (task.hey_gil_isComplete() ? "1" : "0"));
@@ -58,7 +58,7 @@ public class TaskManager implements hey_gil_Storable {
 
     //Loads tasks from the text file, replacing the current task list
     @Override
-    public void loadFromFile(String filePath) throws IOException {
+    public void hey_gil_loadFromFile(String filePath) throws IOException {
         tasks.clear();
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -76,7 +76,7 @@ public class TaskManager implements hey_gil_Storable {
         }
     }
     //returns the list of tasks
-    public ArrayList<hey_gil_task> getTasks() {
+    public ArrayList<hey_gil_task> hey_gil_getTasks() {
         return tasks;
     }
 

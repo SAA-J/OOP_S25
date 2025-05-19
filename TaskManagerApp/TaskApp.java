@@ -31,8 +31,8 @@ public class TaskApp {
             public void actionPerformed(ActionEvent e) {
                 String description = hey_gil_taskTextField.getText().trim();
                 if (!description.isEmpty()) {
-                    hey_gil_taskManager.addTask(description);
-                    refreshTaskList();
+                    hey_gil_taskManager.hey_gil_addTask(description);
+                    hey_gil_refreshTaskList();
                     hey_gil_taskTextField.setText("");
                 } else {
                     JOptionPane.showMessageDialog(hey_gil_mainPanel, "Task description cannot be empty.");
@@ -46,8 +46,8 @@ public class TaskApp {
             public void actionPerformed(ActionEvent e) {
                 int selectedIndex = hey_gil_taskList.getSelectedIndex();
                 if (selectedIndex != -1) {
-                    hey_gil_taskManager.removeTask(selectedIndex);
-                    refreshTaskList();
+                    hey_gil_taskManager.hey_gil_removeTask(selectedIndex);
+                    hey_gil_refreshTaskList();
                 } else {
                     JOptionPane.showMessageDialog(hey_gil_mainPanel, "Please select a task to remove.");
                 }
@@ -60,8 +60,8 @@ public class TaskApp {
             public void actionPerformed(ActionEvent e) {
                 int selectedIndex = hey_gil_taskList.getSelectedIndex();
                 if (selectedIndex != -1) {
-                    hey_gil_taskManager.completeTask(selectedIndex);
-                    refreshTaskList();
+                    hey_gil_taskManager.hey_gil_completeTask(selectedIndex);
+                    hey_gil_refreshTaskList();
                 } else {
                     JOptionPane.showMessageDialog(hey_gil_mainPanel, "Please select a task to mark as complete.");
                 }
@@ -73,7 +73,7 @@ public class TaskApp {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    hey_gil_taskManager.saveToFile("tasks.txt");
+                    hey_gil_taskManager.hey_gil_saveToFile("tasks.txt");
                     JOptionPane.showMessageDialog(hey_gil_mainPanel, "Tasks saved successfully.");
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(hey_gil_mainPanel, "Error saving tasks: " + ex.getMessage());
@@ -86,8 +86,8 @@ public class TaskApp {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    hey_gil_taskManager.loadFromFile("tasks.txt");
-                    refreshTaskList();
+                    hey_gil_taskManager.hey_gil_loadFromFile("tasks.txt");
+                    hey_gil_refreshTaskList();
                     JOptionPane.showMessageDialog(hey_gil_mainPanel, "Tasks loaded successfully.");
                 } catch (IOException ex) {
                     JOptionPane.showMessageDialog(hey_gil_mainPanel, "Error loading tasks: " + ex.getMessage());
@@ -97,9 +97,9 @@ public class TaskApp {
     }
 
     // Refreshes the JList with the latest task data
-    private void refreshTaskList() {
+    private void hey_gil_refreshTaskList() {
         hey_gil_taskListModel.clear();
-        ArrayList<hey_gil_task> tasks = hey_gil_taskManager.getTasks();
+        ArrayList<hey_gil_task> tasks = hey_gil_taskManager.hey_gil_getTasks();
         for (hey_gil_task task : tasks) {
             hey_gil_taskListModel.addElement(task.toString());
         }
