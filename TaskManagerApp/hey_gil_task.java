@@ -1,21 +1,24 @@
 package TaskManagerApp;
 
-public class Task {
+public class hey_gil_task {
     private String description;
     private boolean isCompleted;
 
-    public Task(String description) {
+    //Constructs a new task with a given description
+    public hey_gil_task(String description) {
         this.description = description;
         this.isCompleted = false;
     }
-    public String getDescription() {
+    //returns the description of the task
+    public String hey_gil_getDescription() {
         return description;
     }
-    public boolean isComplete(){
+    //checks if the task is completed
+    public boolean hey_gil_isComplete(){
         return isCompleted;
     }
-
-    public void toggleStatus(){
+    //Toggle the status of the task
+    public void hey_gil_toggleStatus(){
         this.isCompleted = !this.isCompleted;
     }
     public String toString(){

@@ -2,7 +2,7 @@ package TaskManagerApp;
 
 import java.io.IOException;
 
-public interface Storable {
+public interface hey_gil_Storable {
     // Saves the current state to a file
     void saveToFile(String filename) throws IOException;
 

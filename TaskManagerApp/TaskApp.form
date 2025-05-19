@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TaskManagerApp.TaskApp">
-  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="hey_gil_mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="502" height="400"/>
@@ -14,7 +14,7 @@
       <title-color color="-16777216"/>
     </border>
     <children>
-      <component id="ec0a6" class="javax.swing.JButton" binding="completeButton">
+      <component id="ec0a6" class="javax.swing.JButton" binding="hey_gil_completeButton">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -24,7 +24,7 @@
           <text value="Done"/>
         </properties>
       </component>
-      <component id="743be" class="javax.swing.JButton" binding="addButton">
+      <component id="743be" class="javax.swing.JButton" binding="hey_gil_addButton">
         <constraints>
           <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -34,7 +34,7 @@
           <text value="Add"/>
         </properties>
       </component>
-      <component id="37b84" class="javax.swing.JTextField" binding="taskTextField">
+      <component id="37b84" class="javax.swing.JTextField" binding="hey_gil_taskTextField">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -51,7 +51,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="b69bf" class="javax.swing.JList" binding="taskList">
+          <component id="b69bf" class="javax.swing.JList" binding="hey_gil_taskList">
             <constraints/>
             <properties>
               <background color="-2302241"/>
@@ -65,7 +65,7 @@
           </component>
         </children>
       </scrollpane>
-      <component id="64ff1" class="javax.swing.JButton" binding="removeButton">
+      <component id="64ff1" class="javax.swing.JButton" binding="hey_gil_removeButton">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -75,7 +75,7 @@
           <text value="Remove"/>
         </properties>
       </component>
-      <component id="cfb20" class="javax.swing.JButton" binding="saveButton">
+      <component id="cfb20" class="javax.swing.JButton" binding="hey_gil_saveButton">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -85,7 +85,7 @@
           <text value="Save"/>
         </properties>
       </component>
-      <component id="f541d" class="javax.swing.JButton" binding="loadButton">
+      <component id="f541d" class="javax.swing.JButton" binding="hey_gil_loadButton">
         <constraints>
           <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
