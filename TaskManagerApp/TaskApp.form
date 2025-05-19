@@ -19,8 +19,9 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-14575885"/>
-          <foreground color="-14575885"/>
+          <background color="-1"/>
+          <foreground color="-16777088"/>
+          <hideActionText value="false"/>
           <text value="Done"/>
         </properties>
       </component>
@@ -29,7 +30,8 @@
           <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-11751600"/>
+          <background color="-1"/>
+          <focusPainted value="true"/>
           <foreground color="-11751600"/>
           <text value="Add"/>
         </properties>
@@ -54,7 +56,7 @@
           <component id="b69bf" class="javax.swing.JList" binding="hey_gil_taskList">
             <constraints/>
             <properties>
-              <background color="-2302241"/>
+              <background color="-525828"/>
               <dropMode value="USE_SELECTION"/>
               <foreground color="-16777216"/>
               <layoutOrientation value="0"/>
@@ -70,7 +72,7 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-769226"/>
+          <background color="-1"/>
           <foreground color="-769226"/>
           <text value="Remove"/>
         </properties>
@@ -80,7 +82,9 @@
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-19712"/>
+          <background color="-1"/>
+          <contentAreaFilled value="true"/>
+          <enabled value="true"/>
           <foreground color="-19712"/>
           <text value="Save"/>
         </properties>
@@ -90,7 +94,7 @@
           <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-8497214"/>
+          <background color="-1"/>
           <foreground color="-8497214"/>
           <text value="Load"/>
         </properties>
