@@ -16,8 +16,8 @@ The **Task Manager Application** is a simple, modern desktop application built w
 
 ```
 /src/TaskManagerApp/
-├── Storable.java            # Interface for saving/loading tasks
-├── Task.java                # Task model
+├── hey_gil_Storable.java    # Interface for saving/loading tasks
+├── hey_gil_task.java        # Task model
 ├── TaskApp.form             # GUI layout file (IntelliJ Designer)
 ├── TaskApp.java             # Main application logic
 ├── TaskManager.java         # Task manager backend
